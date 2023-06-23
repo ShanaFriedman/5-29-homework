@@ -49,7 +49,6 @@ const MyBookmarks = () => {
                     {myBookmarks.map(b => <MyBookmarkRow bookmark={b}
                         key={b.id}
                         deleteClick={() => onDeleteClick(b)} 
-                        onUpdateClick={() => onUpdateClick(b)}
                         updateClick={onUpdateClick}
                         />)}
                 </tbody>

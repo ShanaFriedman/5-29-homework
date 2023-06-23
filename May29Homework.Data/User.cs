@@ -15,9 +15,7 @@ namespace May29Homework.Data
         public string Email { get; set; }
         [JsonIgnore]
         public string PasswordHash { get; set; }
-        //[JsonIgnore]
         public List<Bookmark> Bookmarks { get; set; }
         
-        //public List<UserBookmark> UserBookmarks { get; set; }
     }
 }

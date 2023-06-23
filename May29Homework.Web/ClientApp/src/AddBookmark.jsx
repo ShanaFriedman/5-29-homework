@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { useAuth } from './AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const AddBookmark = () => {
     const [bookmark, setBookmark] = useState({
@@ -10,16 +9,15 @@ const AddBookmark = () => {
         url: '',
     })
     const navigate = useNavigate()
-    const {user, setUser} = useAuth()
+    
     const onTextChange = e => {
         const copy = {...bookmark}
         copy[e.target.name] = e.target.value 
-        setBookmark({...copy})
+        setBookmark(copy)
     }
     const onSubmit = async e => {
         e.preventDefault()
         await axios.post('/api/bookmark/addbookmark', bookmark)
-        setUser({...user})
         navigate('/mybookmarks')
     }
 

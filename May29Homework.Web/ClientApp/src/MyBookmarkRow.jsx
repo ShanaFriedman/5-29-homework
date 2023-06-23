@@ -4,7 +4,7 @@ const MyBookmarkRow = ({ bookmark, deleteClick, updateClick }) => {
     const [editMode, setEditMode] = useState(false)
 
     const onTextChanges = e => {
-        setBookmarks({...editBookmark, title: e.target.value})
+        setBookmarks({ ...editBookmark, title: e.target.value })
     }
 
     const onCancelClick = () => {
@@ -12,7 +12,7 @@ const MyBookmarkRow = ({ bookmark, deleteClick, updateClick }) => {
         setBookmarks(bookmark)
     }
 
-    const onUpdateClick = async() => {
+    const onUpdateClick = async () => {
         await updateClick(editBookmark)
         setEditMode(false)
     }

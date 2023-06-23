@@ -12,11 +12,8 @@ namespace May29Homework.Data
         public int Id { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
-        //public int Count { get; set; }
         public int UserId { get; set; }
         [JsonIgnore]
         User User { get; set; }
-        //[JsonIgnore]
-        //public List<UserBookmark> UserBookmarks { get; set; }
     }
 }
